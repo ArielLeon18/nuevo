@@ -8,6 +8,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/style.css">
+
+        <link rel="stylesheet" href="../css/login.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
         <%- include('../partials/head'); %>
 
     </head>
@@ -20,19 +26,55 @@
             
         </header>
 
-        <div class= "main-login-registro">
+        <!-- <div class= "main-login-registro">
 
             <form class="form-registro" method="POST" action="/login">
                 <h4>Login</h4>    
                 <input class="casilla" type="email" name="email" id="email" placeholder="Correo electrónico">
                 <input class="casilla" type="password" name="password" id="password" placeholder="Contraseña">
+
+
+
                 <div class="cont-botón">
                     <input class="botón" type="submit" value="Iniciar Sesión">
-                    <a class="botón" href="/users/registro"><input type="buttom" value="registrarme"></a>
+                    <a class="botón" href="/users/registro">
+
+                    <input type="buttom" value="registrarme"></a>
                 </div>
             </form>
 
-        </div>
+        </div> -->
+
+
+        <main>
+            <form class="form-registro" method="POST" action="/login">
+                <div class="box-login">
+                    <div class="box-login-datos">
+                        <label for="" class="login-titulo">ACCESO USUARIOS</label>
+                        <br>
+                        <label for="">Correo electrónico *</label> 
+                        <input type="email" name="email" id="email" class="login-text" placeholder="ejemplo@email.com">
+                        <br>
+                        <label for="">Contraseña *</label>
+                        <input type="password" name="password" id="password" class="login-text" placeholder="">
+                        <label for="recuperar-contraseña">¿Olvidaste tu contraseña?</label>
+                    </div>
+                    
+                    <div class="box-login-botones">
+
+
+
+                        <input class="btn btn-primary" type="submit" value="Iniciar Sesión">
+                        <a class="botón" href="/users/registro">
+
+                        <!-- <button type="submit" id="login-ingresar" class="btn btn-primary">Ingresar</button> -->
+                        <!-- <button type="submit" id="login-registrarme" class="btn btn-info">Registrarme</button> -->
+
+                        <input type="buttom" value="Registrarme" id="login-registrarme" class="btn btn-info"></a>
+                    </div>
+                </div>
+            </form>
+        </main>
 
         <footer>
 
